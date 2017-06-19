@@ -1,0 +1,78 @@
+/* CSS Document */
+/*Maqueta base del proyecto*/
+#contenedor{
+width:1820px;
+padding:10px;
+background:#EFF;
+margin:0 auto;
+border-radius:100px;
+-webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.3);
+-moz-box-shadow:    0px 3px 8px 1px rgba(0,0,0,0.3);
+box-shadow:         0px 3px 8px 1px rgba(0,0,0,0.3);
+}
+/*reset de html y body*/
+body,html{margin:0;padding:0;}
+body{font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+/*Crear barra de menu y arranques*/
+#barra_menu{
+padding:5px 20px;
+background:#BC0101;
+font-size:16px;
+color:#FFF;
+-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.3);
+-moz-box-shadow:    0px 0px 8px 1px rgba(0,0,0,0.3);
+box-shadow:         0px 0px 8px 1px rgba(0,0,0,0.3);
+margin-bottom:00px;
+overflow:hidden;
+min-width:1860px;
+}
+
+#barra_menu ul /*Agregar una lista al menu*/
+{ list-style:none;
+  padding:0;
+  margin:0;
+  float:left;
+}
+#barra_menu ul li /*Agregar un item a la lista del menu*/
+{ padding:2px;
+  margin:0;
+  float:left;
+}
+#barra_menu a /*Agregar un arranque de pagina  a la lista del menu*/
+{ display:block;
+  height:50px;
+  padding:0 5px;
+  text-decoration:none;
+  color:#FFF;
+  border-radius:5px;
+}
+#barra_menu a:hover /*Agregar un resalto del arranque*/
+{ color:#000;
+  background:#FFF;
+}
+/*AJUSTE DE GRILLAS Y COSAS CUADRADAS*/
+table.gridtable
+{ font-family:Arial, Helvetica, sans-serif; font-size:14px;
+  color:#333333;
+  border-width:1px;
+  border-color:#666666;
+  border-collapse:collapse; 
+}
+table.gridtable th /*Agregar encabezados a la grilla*/
+{ border-width:1px;
+   padding:8px;
+   border-style:solid;
+   border-color:#666666;
+   background-color:#777777;
+   background-color:#DEDEDE;
+}
+table.gridtable td /*Agregar DATA a la grilla*/
+{  border-width:1px;
+   padding:8px;
+   border-style:solid;
+   border-color:#666666;
+   background-color:#FFFFFF;
+   text-align:center;
+}
+
+
