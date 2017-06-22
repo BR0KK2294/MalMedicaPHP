@@ -18,7 +18,7 @@
 require_once("../Datos/Conexion.php");
 $objConex=new Conexion();
 $objConex->abrirConexion();
-$sql="SELECT * FROM USUARIOS";
+$sql="SELECT * FROM USUARIO";
 $datos=$objConex->generarTransaccion($sql);
 
 echo "<html><center>";
