@@ -24,9 +24,9 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
   $objReceta=new Receta();
   $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
   $resul=$objReceta->ingresarReceta();
-  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
-			   window.location='../Vision/GUIReceta.php'</script>";}
+			   window.location='../Vision/GUIIngresoReceta.php'</script>";}
 }
 
 
@@ -34,17 +34,17 @@ if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 { $objReceta=new Receta();
   $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
   $resul=$objReceta->modificarReceta();
-  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
-			   window.location='../Vision/GUIReceta.php'</script>";}
+			   window.location='../Vision/GUIIngresoReceta.php'</script>";}
 }
 if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
 { $objReceta=new Receta();
   $objReceta->setId_reseta($id_reseta);
   $resul=$objReceta->eliminarReceta();
-  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
-			   window.location='../Vision/GUIReceta.php'</script>";}
+			   window.location='../Vision/GUIIngresoReceta.php'</script>";}
 }
 
 ?>

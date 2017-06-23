@@ -1,5 +1,5 @@
 <?php
-require_once("../Negocio/Farmaco.php");
+require_once("../Negocio/TipoFarmaco.php");
 
 if(isset($_POST["id_tipo_farmaco"]) && $_POST["id_tipo_farmaco"]!="")
 { $id_tipo_farmaco=$_POST["id_tipo_farmaco"];}
