@@ -1,10 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Documento sin t&iacute;tulo</title>
-</head>
+<?php
+require_once("../Negocio/Receta.php");
 
-<body>
-</body>
-</html>
+if(isset($_POST["id_reseta"]) && $_POST["id_reseta"]!="")
+{ $id_reseta=$_POST["id_reseta"];}
+
+if(isset($_POST["fecha_emision"]) && $_POST["fecha_emision"]!="")
+{ $fecha_emision=$_POST["fecha_emision"];}
+
+if(isset($_POST["total_receta"]) && $_POST["total_receta"]!="")
+{ $total_receta=$_POST["total_receta"];}
+
+if(isset($_POST["estado"]) && $_POST["estado"]!="")
+{ $estado=$_POST["estado"];}
+
+if(isset($_POST["id_usuarios"]) && $_POST["id_usuarios"]!="")
+{ $id_usuarios=$_POST["id_usuarios"];}
+
+
+
+
+if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
+{ 
+  $objReceta=new Receta();
+  $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
+  $resul=$objReceta->ingresarReceta();
+  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
+			   window.location='../Vision/GUIReceta.php'</script>";}
+}
+
+
+if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
+{ $objReceta=new Receta();
+  $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
+  $resul=$objReceta->modificarReceta();
+  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
+			   window.location='../Vision/GUIReceta.php'</script>";}
+}
+if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
+{ $objReceta=new Receta();
+  $objReceta->setId_reseta($id_reseta);
+  $resul=$objReceta->eliminarReceta();
+  if($resul!="")  header("Location:../Vision/GUIReceta.php");
+  else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
+			   window.location='../Vision/GUIReceta.php'</script>";}
+}
+
+?>
