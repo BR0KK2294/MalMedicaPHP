@@ -11,17 +11,7 @@
 </head>
 
 <body>
-<div class="container-fluid" style="background-color:#7ABDFF">
-  <header id="navegador" class="container">
-    <img src="../Imagenes/Logo-MalMedica.png" />
-    <ul class="nav nav-pills">
-      <li role="presentation" ><a href="Home.html">Home</a></li>
-      <li role="presentation" class="active" ><a href="#">ingreso Receta</a></li>
-      <li role="presentation" ><a href="Mantenedor.html">Mantenedor</a></li>
-      <li role="presentation" ><a href="GUIConsulta.php">Consultas</a></li>
-    </ul>
-  </header>
-</div>
+<?php include './header.php'; ?>
 <div class="container">
   <section class="row">
       <form action="GUIIngresoReceta.php" method="post">

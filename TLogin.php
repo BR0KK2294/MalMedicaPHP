@@ -8,7 +8,7 @@ if(isset($_POST["pass_usuario"]) & $_POST["pass_usuario"]!="" )
   if(isset($_POST["OK"]) && $_POST["OK"]=="Enlace")
   { $val=0;
     $val=evaluarUsuario($login_usuario,$pass_usuario);
-    if ($val==1) header("Location:Vision/GUIHome.php");
+    if ($val==1) header("Location:Vision/Home.php");
 	else         header("Location:TLogin.php");
   }
   
@@ -18,7 +18,7 @@ if(isset($_POST["pass_usuario"]) & $_POST["pass_usuario"]!="" )
   { include("Datos/Conexion.php");
     $objConex=new Conexion();
     $objConex->abrirConexion();
-    $sql="SELECT * FROM USUARIOS WHERE(LOGIN_USUARIO='".$login_usuario."' && PASS_USUARIO='".$pass_usuario."')";
+    $sql="SELECT * FROM USUARIO WHERE(LOGIN_USUARIO='".$login_usuario."' && PASS_USUARIO='".$pass_usuario."')";
 	$datos=$objConex->generarTransaccion($sql);
     $reg=$reg=mysql_fetch_row($datos);
 	if($reg[0]==$login_usuario && $reg[1]==$pass_usuario) return 1;
