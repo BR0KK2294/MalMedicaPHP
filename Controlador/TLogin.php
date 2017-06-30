@@ -15,7 +15,7 @@ if(isset($_POST["pass_usuario"]) & $_POST["pass_usuario"]!="" )
  
   
   function evaluarUsuario($login_usuario,$pass_usuario)
-  { include("Datos/Conexion.php");
+  { include("../Datos/Conexion.php");
     $objConex=new Conexion();
     $objConex->abrirConexion();
     $sql="SELECT * FROM USUARIO WHERE(LOGIN_USUARIO='".$login_usuario."' && PASS_USUARIO='".$pass_usuario."')";

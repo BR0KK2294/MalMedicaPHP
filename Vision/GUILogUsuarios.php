@@ -9,7 +9,7 @@
 <body background="../Imagenes/azul.jpg">
 <div id="barra_superior">
   <ul class="navegacion">
-  <li><a href="../GUILogin.php">VOLVER</a></li> 
+  <li><a href="GUILogin.php">VOLVER</a></li> 
   </ul>
 </div>
 </body>
