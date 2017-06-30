@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<?php include './header.php'; ?>
+<?php include 'callHeader.php'; ?>
 <div class="container">
   <section class="row">
     <h3> Desc. Farmacia - programa</h3>
@@ -19,6 +19,6 @@
   </section>
 </div>
 
-<?php include './footer.php'; ?>
+<?php include 'callFooter.php'; ?>
 </body>
 </html>

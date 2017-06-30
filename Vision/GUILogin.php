@@ -90,7 +90,7 @@ if (isset($_POST['login_usuario'])) {
 </head>
 
 <body background="../Imagenes/zaha.jpg">
-<?php include './header.php'; ?>
+<?php include 'callHeader.php'; ?>
 <div>
  <center>
  <br/> <br/> <br/>
@@ -114,7 +114,7 @@ if (isset($_POST['login_usuario'])) {
  
  </center>
 </div>
-<?php include './footer.php'; ?>
+<?php include 'callFooter.php'; ?>
 </body>
 </html>
 <?php
