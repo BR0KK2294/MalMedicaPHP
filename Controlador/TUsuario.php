@@ -23,7 +23,7 @@ if(isset($_POST["id_perfil"]) && $_POST["id_perfil"]!="")
 
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
-{ 
+{
   $objUsuario=new Usuarios();
   $objUsuario->Usuarios($id_usuario,$login_usuario,$pass_usuario,$nombre_usuario,$apellido_usuario,$correo_usuario,$edad_usuario,$fecha_nacimiento,$id_perfil);
   $resul=$objUsuario->ingresarUsuario();

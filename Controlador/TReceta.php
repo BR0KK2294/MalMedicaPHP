@@ -1,8 +1,8 @@
 <?php
 require_once("../Negocio/Receta.php");
 
-if(isset($_POST["id_reseta"]) && $_POST["id_reseta"]!="")
-{ $id_reseta=$_POST["id_reseta"];}
+if(isset($_POST["id_receta"]) && $_POST["id_receta"]!="")
+{ $id_reseta=$_POST["id_receta"];}
 
 if(isset($_POST["fecha_emision"]) && $_POST["fecha_emision"]!="")
 { $fecha_emision=$_POST["fecha_emision"];}
@@ -20,9 +20,9 @@ if(isset($_POST["id_usuarios"]) && $_POST["id_usuarios"]!="")
 
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
-{ 
+{
   $objReceta=new Receta();
-  $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
+  $objReceta->Receta($id_receta,$fecha_emision,$total_receta,$estado,$id_usuarios);
   $resul=$objReceta->ingresarReceta();
   if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
@@ -32,7 +32,7 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
 
 if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 { $objReceta=new Receta();
-  $objReceta->Receta($id_reseta,$fecha_emision,$total_receta,$estado,$id_usuarios);
+  $objReceta->Receta($id_receta,$fecha_emision,$total_receta,$estado,$id_usuarios);
   $resul=$objReceta->modificarReceta();
   if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);
@@ -40,7 +40,7 @@ if(isset($_POST["OK1"]) && $_POST["OK1"]=="Modificar")
 }
 if(isset($_POST["OK2"]) && $_POST["OK2"]=="Eliminar")
 { $objReceta=new Receta();
-  $objReceta->setId_reseta($id_reseta);
+  $objReceta->setId_reseta($id_receta);
   $resul=$objReceta->eliminarReceta();
   if($resul!="")  header("Location:../Vision/GUIIngresoReceta.php");
   else {       echo "<script language='javascript'>alert('Error'...Registro de Receta perdido...);

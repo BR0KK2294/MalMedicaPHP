@@ -20,7 +20,7 @@ if(isset($_POST["id_tipo_farmaco"]) && $_POST["id_tipo_farmaco"]!="")
 
 
 if(isset($_POST["OK"]) && $_POST["OK"]=="Ingresar")
-{ 
+{
   $objFarmaco=new Farmaco();
   $objFarmaco->Farmaco($id_farmaco,$descripcion_farmaco,$precio_farmaco,$unidad,$id_tipo_farmaco);
   $resul=$objFarmaco->ingresarFarmaco();
